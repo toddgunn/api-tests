@@ -1,10 +1,12 @@
 {
   "dependencies": {
+    "config": "^3.3.7",
     "jest": "^27.4.7",
-    "mocha": "^9.2.0"
+    "mocha": "^9.2.0",
+    "node-fetch": "^3.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha 'test-change/change.test.js'"
   },
   "type": "module"
 }
