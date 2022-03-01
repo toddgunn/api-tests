@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todd-gunn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todd-gunn
+  template:
+    metadata:
+      labels:
+        app: todd-gunn
+    spec:
+      containers:
+      - name: todd-gunn
+        image: nginx
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 250m
+          requests:
+            cpu: 50m
+            memory: 100m
