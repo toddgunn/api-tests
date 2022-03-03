@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: gilber-chen
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels:
+      app: gilber-chen
+  template: 
+      metadata: 
+        labels: 
+          app: gilber-chen 
+      spec: 
+        containers: 
+        - name: gilber-chen 
+          image: nginx
+          ports: 
+          - containerPort: 80
+          resources: 
+            limits: 
+              cpu: 100m
+              memory: 250M 
+            requests: 
+              cpu: 50m 
+              memory: 100M
+              
+
